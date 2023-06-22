@@ -1,0 +1,109 @@
+.main_wrapper {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 300px;
+
+  .comments_wrapper {
+    .comment {
+      position: relative;
+      height: 80px;
+      width: 500px;
+      background: #feee7f;
+      margin-top: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      padding: 20px;
+      box-sizing: border-box;
+      z-index: 0;
+      color: #938e6b;
+
+      .name {
+        background: #cd9711;
+        color: white;
+        border-radius: 50%;
+        height: 60px;
+        width: 60px;
+        font-size: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: -30px;
+        left: -30px;
+        z-index: 1;
+      }
+
+      .username {
+        position: absolute;
+        top: -20px;
+        left: 15px;
+        height: 40px;
+        width: 120px;
+        background: #cd9711;
+        color: black;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+
+        z-index: -1;
+      }
+
+      .button_delete {
+        position: absolute;
+        right: -15px;
+        top: -15px;
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        background: #cd9711;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .textarea_wrapper {
+    margin-top: 50px;
+    position: relative;
+
+    .textarea {
+      resize: none;
+      width: 500px;
+      height: 100px;
+      padding: 15px;
+      box-sizing: border-box;
+    }
+
+    .button_send {
+      color: white;
+      background: #5a2424;
+      padding: 8px 22px;
+      position: absolute;
+      bottom: -15px;
+      right: -15px;
+      cursor: pointer;
+    }
+  }
+}
+
+
+.exit {
+  animation: toggleModal 0.5s forwards;
+}
+
+@keyframes toggleModal {
+  0% {
+    left: 0;
+    opacity: 1;
+  }
+  100% {
+    left: 300px;
+    opacity: 0;
+  }
+}
